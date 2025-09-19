@@ -5,7 +5,6 @@ The goal is to demonstrate how forward pass, backward pass, and parameter update
 
 ## 📂 Project Structure
 ```
-Task 1/
 │── model.py       # Core implementation: Dense layer, activations, loss, optimizer
 │── train.ipynb    # Notebook with data generation, training loop, plots
 │── README.md      # Project description, setup, and results
