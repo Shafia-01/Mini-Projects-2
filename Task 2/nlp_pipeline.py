@@ -1,4 +1,3 @@
-# nlp_pipeline.py
 import re
 from typing import List, Tuple, Dict
 from collections import Counter
@@ -14,13 +13,11 @@ resources = [
     'wordnet', 
     'stopwords'
 ]
-
 for r in resources:
     try:
         nltk.data.find(r)
     except LookupError:
         nltk.download(r)
-
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -33,7 +30,6 @@ STOPWORDS = set(stopwords.words('english'))
 LEMMATIZER = WordNetLemmatizer()
 SIA = SentimentIntensityAnalyzer()
 BIGRAM_MEASURES = BigramAssocMeasures()
-
 _WORD_RE = re.compile(r"[A-Za-z']{2,}")
 
 def clean_text(text: str) -> str:
@@ -53,7 +49,6 @@ def remove_stopwords(tokens: List[str]) -> List[str]:
     return [t for t in tokens if t not in STOPWORDS]
 
 def lemmatize(tokens: List[str]) -> List[str]:
-    # simple mapping: lemma per token
     return [LEMMATIZER.lemmatize(t) for t in tokens]
 
 def pos_tags(tokens: List[str]) -> List[Tuple[str, str]]:
@@ -69,13 +64,10 @@ def freq_dist(tokens: List[str], n: int = 30) -> List[Tuple[str,int]]:
 def top_ngrams(tokens: List[str], ngram=2, top_n=20) -> List[Tuple[Tuple[str,...], int]]:
     if ngram == 1:
         return freq_dist(tokens, top_n)
-    # for bigrams (ngram==2) use collocation finder for more interesting pairs
     if ngram == 2:
         finder = BigramCollocationFinder.from_words(tokens)
-        # score by raw frequency
-        scored = finder.ngram_fd.items()  # dict-like
+        scored = finder.ngram_fd.items() 
         return sorted(scored, key=lambda x: x[1], reverse=True)[:top_n]
-    # fallback: naive ngram
     ngrams = zip(*(tokens[i:] for i in range(ngram)))
     c = Counter(ngrams)
     return c.most_common(top_n)
