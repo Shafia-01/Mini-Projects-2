@@ -60,7 +60,7 @@ results = {
 results_df = pd.DataFrame(results)
 
 # Save to CSV
-results_df.to_csv("benchmark_results.csv", index=False)
+results_df.to_csv("Task 3/benchmark_results.csv", index=False)
 
 # Plot
 fig, ax = plt.subplots(figsize=(6, 4))
@@ -74,5 +74,5 @@ ax.set_title("NumPy vs pandas Performance")
 ax.legend()
 plt.xticks(rotation=15)
 plt.tight_layout()
-plt.savefig("benchmark_plot.png")
+plt.savefig("Task 3/benchmark_plot.png")
 plt.show()

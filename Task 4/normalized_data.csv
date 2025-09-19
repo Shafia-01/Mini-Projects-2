@@ -1,0 +1,15 @@
+,EmployeeID,Name,Department,PositionTitle,Salary,HireDate,Benefits_Cost
+0,1001,John Smith,Police,Police Officer I,55000,2015-01-10,12500
+1,1002,Jane Doe,Fire,Firefighter,60000.5,2014/03/15,14000
+2,1003,Peter Jones,Parks & Rec,Parks Maintenance,52000,2018-05-22,11000
+3,1004,Sarah Lee,Public Works,Sanitation Worker,48000.75,2019-11-01,10500
+4,1005,Anna Scott,Finance,Accountant I,65000,2016-07-20,15000
+6,1007,Maria Garcia,Fire,Firefighter,61000,2017-02-14,14200
+7,1008,David Wilson,Water,Civil Engineer,72000,2013-04-30,16000
+8,1009,Emily Chen,Public Works,Civil Engineer,85000,2011-08-25,18000
+9,1010,Tom Johnson,Parks & Rec,Parks Maintenance,forty thousand,2020-01-15,9500
+10,1011,Linda Davis,Library,Librarian,62000,2015-06-18,13000
+11,1012,Robert Williams,Police,Police Officer,-5000,2016-09-22,12800
+12,1013,Anna Scott,IT,IT Specialist,75000,2012-10-01,17000
+13,1014,Chris Evans,Public Works,Civil Engineer,90000,10/25/2010,19000
+14,1015,Michelle White,Finance,Financial Analyst,88000,2019-03-05,18500

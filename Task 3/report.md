@@ -26,10 +26,10 @@ The goal is to compare **NumPy (vectorized/stride tricks)** vs. **pandas (built-
 ## 4. Results (example from benchmarks)
 | Task               | NumPy (s) | pandas (s) |
 |--------------------|-----------|------------|
-| Rolling Mean/Var   | 1.23      | 2.89       |
-| EWMA               | 0.65      | 0.84       |
-| FFT Spectrum       | 0.42      | N/A        |
-| Band-pass Filter   | 0.53      | N/A        |
+| Rolling Mean/Var   | 2.448     | 0.161      |
+| EWMA               | 0.375     | 0.012      |
+| FFT Spectrum       | 0.024     | N/A        |
+| Band-pass Filter   | 0.037     | N/A        |
 
 - **NumPy with stride tricks** outperformed pandas for rolling statistics.  
 - **EWMA** was comparable, with pandas slightly easier to use but NumPy faster on very large arrays.  
