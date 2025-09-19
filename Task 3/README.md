@@ -26,7 +26,6 @@ This project implements efficient time series transformations using NumPy and pa
 - Python 3.11+ (tested on Python 3.13 without Numba)
 - Libraries:
 ```
-txt
 numpy
 pandas
 matplotlib
